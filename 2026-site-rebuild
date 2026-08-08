@@ -1,0 +1,12 @@
+wrangler.jsonc
+{
+  // The name of your Cloudflare project. Must match the project you created.
+  "name": "ecareercoaching-website",
+  // A recent date is all Cloudflare needs here.
+  "compatibility_date": "2026-08-08",
+  // This is the line that fixes your error: it tells the deploy
+  // where your website files live. They live in the "public" folder.
+  "assets": {
+    "directory": "./public"
+  }
+}
