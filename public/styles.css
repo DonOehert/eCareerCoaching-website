@@ -214,7 +214,6 @@ code, .inline-code { font-family: var(--font-mono); font-size: 0.9em; background
   .site-footer .row { flex-direction: column; align-items: flex-start; }
 }
 
-
 /* ============================================================
    Multi-page components (Home, Story, Coaching, Employers, etc.)
    ============================================================ */
