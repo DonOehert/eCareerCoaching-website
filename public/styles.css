@@ -7,12 +7,12 @@
 
 :root {
   /* Palette */
-  --bg:        #edf1fb;   /* soft lavender page background */
+  --bg:        #E8F2FC;   /* very light blue page background */
   --surface:   #ffffff;   /* cards */
   --ink:       #1a1a22;   /* near-black headings */
   --muted:     #55586a;   /* body / secondary text */
   --faint:     #8a8ea3;   /* labels, footnotes */
-  --navy:      #202a6b;   /* deep indigo: logo, dark cards, buttons */
+  --navy:      #01104B;   /* brand navy: logo, dark cards, buttons */
   --navy-2:    #27327e;   /* lighter navy for gradients */
   --code-bg:   #141d47;   /* dark code blocks */
   --accent:    #2d43d1;   /* royal blue: links, highlights, numbers */
@@ -57,7 +57,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Eyebrow / mono labels (design signature) ---------- */
 .eyebrow {
   font-family: var(--font-mono);
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.18em;
   font-size: 0.78rem;
   font-weight: 600;
@@ -99,7 +99,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .brand .name { font-weight: 700; font-size: 1.15rem; color: var(--navy); line-height: 1.1; }
 .brand .name b { color: var(--accent); }
 .brand .sub { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--faint); display: block; margin-top: 2px; }
+  text-transform: capitalize; color: var(--faint); display: block; margin-top: 2px; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 3rem 0 4rem; }
@@ -121,13 +121,13 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .score-head .eyebrow { color: var(--faint); }
 .pill {
   font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em;
-  text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px;
+  text-transform: capitalize; padding: 0.3rem 0.7rem; border-radius: 999px;
   background: #eef1ff; color: var(--accent); font-weight: 600;
 }
 .stamp {
   position: absolute; top: -18px; right: 18px; transform: rotate(7deg);
   font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--navy); font-weight: 700; line-height: 1.15;
+  text-transform: capitalize; color: var(--navy); font-weight: 700; line-height: 1.15;
   border: 2px solid var(--navy); border-radius: 8px; padding: 0.35rem 0.6rem; background: #fff; text-align: center;
 }
 .score-row-head, .score-row {
@@ -136,8 +136,8 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 }
 .score-row-head { border-top: none; }
 .score-row-head span { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--faint); }
-.badge { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase;
+  text-transform: capitalize; color: var(--faint); }
+.badge { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: capitalize;
   font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 999px; }
 .badge.strong { background: var(--strong-bg); color: var(--strong-fg); }
 .badge.partial { background: var(--partial-bg); color: var(--partial-fg); }
@@ -163,7 +163,7 @@ code, .inline-code { font-family: var(--font-mono); font-size: 0.9em; background
 .prompt-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: var(--shadow); padding: 2rem; margin-top: 1.5rem; }
 .prompt-card .tag { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  text-transform: capitalize; color: var(--accent); font-weight: 600; }
 .prompt-card .title-row { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
 .prompt-card .desc { color: var(--muted); margin: 0.5rem 0 1.25rem; }
 .codeblock { background: var(--code-bg); border-radius: var(--radius); overflow: hidden; }
@@ -244,7 +244,7 @@ code, .inline-code { font-family: var(--font-mono); font-size: 0.9em; background
 /* Service tiles */
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.75rem; }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.7rem; box-shadow: var(--shadow); display: flex; flex-direction: column; }
-.tile .kicker { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+.tile .kicker { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: capitalize; color: var(--accent); margin-bottom: 0.6rem; }
 .tile h3 { margin-bottom: 0.5rem; }
 .tile p { color: var(--muted); flex: 1; }
 .tile a.tilelink { margin-top: 1.1rem; font-weight: 700; }
@@ -252,7 +252,7 @@ code, .inline-code { font-family: var(--font-mono); font-size: 0.9em; background
 /* Big quote / testimonial */
 .quote { background: var(--surface); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 1.9rem 2.1rem; box-shadow: var(--shadow); }
 .quote p { font-size: 1.15rem; color: var(--ink); line-height: 1.55; }
-.quote .who { margin-top: 1rem; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.05em; color: var(--faint); text-transform: uppercase; }
+.quote .who { margin-top: 1rem; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.05em; color: var(--faint); text-transform: capitalize; }
 .quote-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1.5rem; }
 
 /* Alt band + two-column feature */
@@ -265,3 +265,7 @@ code, .inline-code { font-family: var(--font-mono); font-size: 0.9em; background
   .feature { grid-template-columns: 1fr; }
   .nav-links { gap: 1rem; flex-wrap: wrap; }
 }
+
+/* Nav CTA button ("Are we a fit?") text stays bright white (overrides .nav-links a color) */
+.nav-links a.btn-primary,
+.nav-links a.btn-primary:hover { color: #fff; }

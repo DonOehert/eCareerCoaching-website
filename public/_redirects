@@ -1,0 +1,9 @@
+# Old Groove URLs -> new site. 301 = permanent, so search engines move the ranking over.
+/index           /          301
+/about-me        /story     301
+/services        /coaching  301
+/services_detail /coaching  301
+/testimonials    /praise    301
+/work-with-me    /coaching  301
+/contact-me      /contact   301
+/priv_pol        /privacy   301
