@@ -1,0 +1,84 @@
+{
+  "synced": "2026-10-01",
+  "source": "eCC Résumé Review applet, My rules tab",
+  "rules": [
+    {
+      "id": "r01",
+      "type": "check",
+      "title": "30-second ad",
+      "text": "The résumé is a 30-second ad for the candidate's professional toolkit. Write it like bumper stickers: short, punchy lines a reader can scan. Flag dense paragraphs and long bullets."
+    },
+    {
+      "id": "r02",
+      "type": "check",
+      "title": "WIM (\"Wow is Me\") section",
+      "text": "Executives open with a WIM area made of 3 short paragraphs: (1) quantified accomplishments (hard skills) and contributions; (2) the soft skills that make the candidate unique among the other applicants for this position; (3) who they are, ideally drawn from personality profiling assessments. Flag any missing paragraph. If paragraph 3 is missing or generic, recommend personality profiling."
+    },
+    {
+      "id": "r03",
+      "type": "check",
+      "title": "Quantified contributions",
+      "text": "Accomplishments should be quantified (revenue, cost, time, headcount, percentages, scale). Most clients need help seeing how their contributions can be quantified. Flag bullets that describe responsibilities instead of results."
+    },
+    {
+      "id": "r04",
+      "type": "check",
+      "title": "Company left, dates right",
+      "text": "Company names sit in the left gutter and the dates of each assignment sit on the right side."
+    },
+    {
+      "id": "r05",
+      "type": "check",
+      "title": "Oxford comma",
+      "text": "Use the Oxford comma in every list of three or more. It provides complete clarity. Flag each missing one."
+    },
+    {
+      "id": "r06",
+      "type": "check",
+      "title": "So What? Says Who?",
+      "text": "Read each line (aloud, ideally) and ask \"So What?\" then \"Says Who?\" Every claim needs a result that matters and evidence behind it, backed by a story the candidate can tell. Flag claims that fail either question."
+    },
+    {
+      "id": "r07",
+      "type": "check",
+      "title": "Submit as PDF",
+      "text": "Always submit the résumé as a PDF. It guarantees the résumé looks as intended: fonts, spacing, special characters."
+    },
+    {
+      "id": "r08",
+      "type": "check",
+      "title": "Clear section breaks",
+      "text": "Make the separation between sections incredibly easy to see by adding white space between them."
+    },
+    {
+      "id": "r09",
+      "type": "check",
+      "title": "Left-justified text",
+      "text": "Use left justification, not full (both-sides) justification. Left justification adds white space."
+    },
+    {
+      "id": "r10",
+      "type": "guidance",
+      "title": "Formatting comes last",
+      "text": "Formatting is the last thing to fix. Put content and quantification feedback ahead of formatting feedback."
+    },
+    {
+      "id": "r11",
+      "type": "check",
+      "title": "5 / 4 / 3-4 bullets",
+      "text": "Use 5 bullet points in the most recent job, 4 in the previous position, and 3-4 RELEVANT points in earlier positions."
+    },
+    {
+      "id": "r12",
+      "type": "check",
+      "title": "Tailored from a base résumé",
+      "text": "Keep one base résumé with every accomplishment back to the start of the career, and turn those successes into SAR stories. Each application uses a copy with anything that doesn't apply to the target role removed. Flag content irrelevant to the target role."
+    },
+    {
+      "id": "r13",
+      "type": "check",
+      "title": "Exact target title at top",
+      "text": "Put the exact title of the position being pursued at the top of the résumé, changed for each application."
+    }
+  ]
+}
