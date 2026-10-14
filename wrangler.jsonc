@@ -1,7 +1,10 @@
 {
   "name": "ecareercoaching-website",
   "compatibility_date": "2026-08-08",
+  // The Worker answers /api/resume-check; everything else is served from ./public as before.
+  "main": "src/worker.js",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS"
   }
 }
