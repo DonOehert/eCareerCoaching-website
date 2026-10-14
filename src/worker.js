@@ -110,7 +110,7 @@ async function handleReview(request, env, ctx, url) {
       "anthropic-version": "2023-06-01",
       "content-type": "application/json",
     },
-    body: JSON.stringify({ model: MODEL, max_tokens: 2500, messages: [{ role: "user", content }] }),
+    body: JSON.stringify({ model: MODEL, max_tokens: 6000, messages: [{ role: "user", content }] }),
   });
   if (!res.ok) {
     console.error("anthropic", res.status, (await res.text()).slice(0, 500));
@@ -123,7 +123,11 @@ async function handleReview(request, env, ctx, url) {
 
   // 5. Validate before anything reaches the visitor
   const review = validate(raw);
-  if (!review) return fail("The check came back incomplete. Please run it again.", 502);
+  if (!review) {
+    // Log only the shape of the failure, never résumé content.
+    console.error("validate-failed", JSON.stringify({ stop_reason: data.stop_reason, chars: raw.length, starts_with_brace: raw.trim().startsWith("{"), output_tokens: data.usage && data.usage.output_tokens }));
+    return fail("The check came back incomplete. Please run it again.", 502);
+  }
   if (review.notResume) return fail("That doesn't look like a résumé. Please upload or paste your résumé and try again.");
   await countUse();
   return json({ ok: true, review });
