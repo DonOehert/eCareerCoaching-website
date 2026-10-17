@@ -269,3 +269,20 @@ code, .inline-code { font-family: var(--font-mono); font-size: 0.9em; background
 /* Nav CTA button ("Are we a fit?") text stays bright white (overrides .nav-links a color) */
 .nav-links a.btn-primary,
 .nav-links a.btn-primary:hover { color: #fff; }
+
+/* Nav fix (2026-10-17): buttons and nav labels never wrap mid-label.
+   On narrower screens the whole nav drops below the logo instead of squeezing. */
+.btn { white-space: nowrap; }
+.nav { gap: 1.5rem; }
+.nav-links a { white-space: nowrap; }
+.nav-links a.btn { flex-shrink: 0; padding: 0.75rem 1.3rem; }
+@media (max-width: 1240px) {
+  .nav { flex-wrap: wrap; row-gap: 1rem; }
+  .nav-links { flex-wrap: wrap; gap: 0.6rem 1.25rem; }
+}
+
+/* Ebook library feature (home page) */
+.library { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center;
+  border: 1px solid var(--line); border-radius: 16px; padding: 2.25rem; background: #fff; }
+.library ul { margin: 0; padding-left: 1.2rem; color: var(--ink); line-height: 1.7; }
+@media (max-width: 860px) { .library { grid-template-columns: 1fr; } }
