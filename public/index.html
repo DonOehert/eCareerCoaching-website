@@ -149,6 +149,14 @@
     <h2 style="margin:1rem 0 0.75rem; font-size:clamp(1.6rem, 3vw, 2.2rem);">Get my monthly newsletter in your inbox.</h2>
     <p style="color:var(--muted); max-width:44ch; font-size:1.1rem; margin-bottom:1.5rem;">Straight talk on landing your next senior role. You'll get a confirmation email first, so check your spam folder if you don't see it.</p>
     <script src="https://cdn.sendfox.com/js/embed.js" data-form="19vlgv" data-api="https://sendfox.com" async></script>
+    <script>
+      /* Pre-check the "I agree to receive email" box once SendFox draws the form (per Don, 2026-10-17). */
+      (function () {
+        var box = document.getElementById("newsletter");
+        function tick() { var c = box && box.querySelector('input[type="checkbox"][name="gdpr"]'); if (c && !c.dataset.prechecked) { c.checked = true; c.dataset.prechecked = "1"; } return !!c; }
+        if (!tick() && box && window.MutationObserver) { var mo = new MutationObserver(function () { if (tick()) mo.disconnect(); }); mo.observe(box, { childList: true, subtree: true }); }
+      })();
+    </script>
   </div>
 </section>
 
