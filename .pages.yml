@@ -1,0 +1,36 @@
+# Pages CMS settings (https://pagescms.org). This is what Don sees when he signs in there.
+media:
+  input: public/images/blog
+  output: /images/blog
+content:
+  - name: blog
+    label: Blog
+    type: collection
+    path: content/blog
+    filename: "{fields.title}.md"
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+      - name: summary
+        label: Summary (shows on the blog page and in Google)
+        type: text
+      - name: draft
+        label: Draft (check this to keep the post hidden)
+        type: boolean
+        default: true
+      - name: body
+        label: Post
+        type: rich-text

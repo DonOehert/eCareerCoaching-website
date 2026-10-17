@@ -1,0 +1,2 @@
+# Built at deploy time by scripts/build-blog.mjs
+public/blog/

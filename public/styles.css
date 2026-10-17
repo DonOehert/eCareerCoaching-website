@@ -276,13 +276,28 @@ code, .inline-code { font-family: var(--font-mono); font-size: 0.9em; background
 .nav { gap: 1.5rem; }
 .nav-links a { white-space: nowrap; }
 .nav-links a.btn { flex-shrink: 0; padding: 0.75rem 1.3rem; }
-@media (max-width: 1240px) {
-  .nav { flex-wrap: wrap; row-gap: 1rem; }
-  .nav-links { flex-wrap: wrap; gap: 0.6rem 1.25rem; }
-}
+/* Wrap only when the menu actually runs out of room, at any screen width */
+.nav { flex-wrap: wrap; row-gap: 1rem; }
+.nav-links { flex-wrap: wrap; gap: 0.6rem 1.4rem; }
 
 /* Ebook library feature (home page) */
 .library { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center;
   border: 1px solid var(--line); border-radius: 16px; padding: 2.25rem; background: #fff; }
 .library ul { margin: 0; padding-left: 1.2rem; color: var(--ink); line-height: 1.7; }
 @media (max-width: 860px) { .library { grid-template-columns: 1fr; } }
+
+/* Blog */
+.post-list { display: grid; gap: 1.25rem; }
+.post-list > * { max-width: 46rem; }
+.post-card { border: 1px solid var(--line); border-radius: 16px; padding: 1.75rem 2rem; background: #fff; }
+.post-card h2 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); margin: 0.35rem 0 0.6rem; }
+.post-card h2 a { color: var(--ink); }
+.post-card p { color: var(--muted); margin-bottom: 0.9rem; }
+.post-date { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.05em; color: var(--faint); }
+.post-more, .post-back { font-weight: 700; }
+.post-back { display: inline-block; margin-bottom: 1.5rem; }
+.post-body h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
+.post h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin: 0.5rem 0 1.75rem; }
+.post-body ul, .post-body ol { margin: 0 0 1.15rem 1.3rem; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
+.post-body blockquote { border-left: 4px solid var(--navy); padding-left: 1.1rem; margin: 1.5rem 0; }
+.post-body img { max-width: 100%; height: auto; border-radius: 12px; margin: 1rem 0; }
